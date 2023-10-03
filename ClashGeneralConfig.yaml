@@ -2,11 +2,7 @@ mixed-port: 7890
 allow-lan: false
 bind-address: "*"
 mode: rule
-routing-mark: 2048
-geodata-mode: false
-unified-delay: true
 udp: true
-enable-process: true
 geox-url:
   mmdb: "https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-Country.mmdb"
   geoip: "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat"
@@ -14,74 +10,9 @@ geox-url:
 iptables:
   enable: true
 log-level: info
-profile:
-  store-selected: true
-  store-fake-ip: true
-  tracing: false
-ipv6: true
-external-controller: 0.0.0.0:9090
-secret: ""
-experimental:
-  ignore-resolve-fail: true
-hosts:
-  "localhost": 127.0.0.1
-find-process-mode: strict
-sniffer:
-  enable: true
-  parse-pure-ip: true
-  override-destination: true
-  sniff:
-    TLS:
-      ports: [443, 8443]
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-  force-domain:
-    - +.v2ex.com
-    - www.google.com
-    - google.com
-  skip-domain:
-    - Mijia Cloud
-    - dlg.io.mi.com
-    - +.apple.com
-global-client-fingerprint: chrome
-tcp-concurrent: true
-clash-for-android:
-  append-system-dns: false
-tun:
-  enable: false
-  device: meta
-  stack: gvisor
-  mtu: 9000
-  strict_route: true
-  inet4_route_address:
-    - 0.0.0.0/1
-    - 128.0.0.0/1
-  inet6_route_address:
-    - "::/1"
-    - "8000::/1"
-  macOS-auto-route: true
-  macOS-auto-detect-interface: true
-  dns-hijack:
-    - 0.0.0.0:53
-    - "any:53"
-  auto-route: true
-  auto-detect-interface: true
-cfw-latency-timeout: 1200
-cfw-latency-url: http://www.google.com/generate_204
-cfw-conn-break-strategy:
-  proxy: chain
-  profile: true
-  mode: true
-cfw-proxies-order: default
-cfw-bypass:
-  - "localhost"
-  - <local>
 dns:
   enable: true
   ipv6: false
-  use-hosts: true
-  listen: 0.0.0.0:14514
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
