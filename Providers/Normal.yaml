@@ -7,6 +7,3 @@ payload:
 
   # Google
   - DOMAIN-SUFFIX,googleapis.cn
-
-  #BiliBili
-  - DOMAIN-SUFFIX,bilibili.com
