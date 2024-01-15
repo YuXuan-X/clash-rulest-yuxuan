@@ -1,0 +1,9 @@
+payload:
+  # DOMAIN-SUFFIX
+
+  # Microsoft
+  - DOMAIN-SUFFIX,microsoft.com
+  - DOMAIN-SUFFIX,bing.com
+
+  # Google
+  - DOMAIN-SUFFIX,googleapis.cn
